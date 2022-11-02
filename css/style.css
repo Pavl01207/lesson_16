@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body {
+	font-family: "Lato", serif;
+	color: #1E212C;
+}
+
+[class*="__container"] {
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 20px 15px 20px 15px;
+
+}
+
+/*фіксована шапка*/
+.header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	background-color: white;
+}
+
+.header__content {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 60px;
+}
+
+.content__list {
+	display: flex;
+	flex: 1 0 auto;
+	gap: 40px;
+}
+
+.content__logo img {
+	min-width: 100%;
+}
+
+.content__log {
+	display: flex;
+	gap: 36px;
+	align-items: center;
+}
+
+.log__button {
+	background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+	border-radius: 4px;
+	padding: 16px 45px 16px 45px;
+}
+
+.log__button {
+	color: white;
+}
+
+.log__button:hover {
+	background: transparent;
+	color: #FF3F3A;
+	outline: 2px solid #FF3F3A;
+}
+
+.log__text {
+	position: relative;
+	padding-left: 25px;
+}
+
+.log__text::before {
+	content: "";
+	background: url(../img/icon/person.svg) center no-repeat;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	margin-left: -25px;
+}
+
+.content__link {
+	position: relative;
+}
+
+.content__link::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 0%;
+	left: 0;
+	height: 3px;
+	background-color: #F75E05;
+	transition: width 0.3s ease 0s;
+}
+
+.content__link:hover::before {
+	width: 100%;
+}
+
+.content__link:hover {
+	color: #FF3F3A;
+}
+
+/*===================================================================*/
+/*головний блок з картою*/
+.page__container {
+	margin-top: 152px;
+}
+
+.page__body {
+	display: flex;
+	gap: 150px;
+	margin-bottom: 100px;
+}
+
+.page__right img {
+	min-width: 100%;
+	margin-right: -30px;
+}
+
+.page__left,
+.page__right {
+	flex: 0 1 50%;
+}
+
+.page__right {
+	margin-top: 32px;
+}
+
+.page__left {
+	padding-right: 10px;
+}
+
+.left__text {
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	color: #1E212C;
+	font-weight: 700;
+}
+
+.left__title {
+	font-weight: 900;
+	font-size: 46px;
+	color: #1E212C;
+	margin-bottom: 40px;
+}
+
+.item__text {
+	color: #787A80;
+	font-size: 14px;
+	font-weight: 700;
+	position: relative;
+	padding-left: 36px;
+	margin-bottom: 5px;
+}
+
+.item__text::before {
+	content: "";
+	background: url(../img/icon/talk.svg) top left no-repeat;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	margin-left: -36px;
+}
+
+.item__text--phone::before {
+	content: "";
+	background: url(../img/icon/phone.svg) top left no-repeat;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	margin-left: -36px;
+}
+
+.item__text--address::before {
+	content: "";
+	background: url(../img/icon/adress.svg) top left no-repeat;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	margin-left: -36px;
+}
+
+.item__info {
+	padding-left: 36px;
+	font-size: 18px;
+}
+
+.item__body:not(:last-child) {
+	margin-bottom: 24px;
+}
+
+.item__body:last-child {
+	margin-bottom: 45px;
+}
+
+.icon__text {
+	margin-bottom: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #1E212C;
+}
+
+.icon__img {
+	display: flex;
+	gap: 32px;
+}
+
+[class^="img"]:hover {
+	transform: scale(1.5);
+}
+
+/*блок із формами*/
+.page__form {
+	display: flex;
+	gap: 105px;
+}
+
+.form__img img {
+	min-width: 100%;
+}
+
+.form__img,
+.form__menu {
+	flex: 0 1 50%;
+}
+
+.form__body {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+}
+
+.block__one,
+.block__two,
+.block__four {
+	display: flex;
+	gap: 25px;
+}
+
+.form__line {
+	flex: 0 1 50%;
+}
+
+.form__label {
+	margin-bottom: 8px;
+}
+
+.form__input {
+	width: 100%;
+	height: 50px;
+	padding-left: 13px;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+}
+
+.form__check,
+.check__button {
+	flex: 0 1 50%;
+}
+
+.text__area {
+	width: 100%;
+	height: 128px;
+	padding: 13px 0 0 16px;
+	border: 1px solid #D7DADD;
+	border-radius: 4px;
+	resize: vertical;
+}
+
+.text__label {
+	margin-bottom: 8px;
+}
+
+.block__four {
+	gap: 40px;
+}
+
+.check__button {
+	background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+	border-radius: 4px;
+	color: white;
+	font-weight: 700;
+	padding: 2px 40px 2px 40px;
+}
+
+.check__button:hover {
+	background: transparent;
+	color: #FF3F3A;
+	outline: 2px solid #FF3F3A;
+}
+
+/*checkbox*/
+.form__check {
+	position: relative;
+}
+
+.check__input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.check__label {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.check__label::before {
+	content: "";
+	flex: 0 0 20px;
+	height: 20px;
+	width: 20px;
+	border-radius: 3px;
+	border: 1px solid #FF3F3A;
+}
+
+/*
+.check__input:focus+.check__label {
+	outline: 2px solid black;
+	border-radius: 2px;
+}
+*/
+
+.check__input:checked+.check__label::before {
+	border: 1px solid #FF3F3A;
+	background: url(../img/icon/checked.png) center/100% no-repeat;
+}
+
+.page__container {
+	margin-bottom: 180px;
+}
+
+/*footer*/
+.footer {
+	background-color: #1E212C;
+}
+
+.footer__container {
+	color: white;
+}
+
+.footer__down {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0 20px 0;
+}
+
+.down__left {
+	display: flex;
+	align-items: center;
+}
+
+.left__words {
+	font-size: 12px;
+	position: relative;
+	padding-right: 20px;
+}
+
+.left__words:last-child::before {
+	content: "";
+	background: url(../img/icon/heart.svg)no-repeat;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	margin-left: -17px;
+}
+
+.footer__column {
+	display: flex;
+	gap: 80px;
+	padding-top: 45px;
+}
+
+.column__one {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.icon__img {
+	margin-bottom: 60px;
+}
+
+.column__list {
+	display: flex;
+	flex-direction: column;
+}
+
+.column__item:not(:last-child) {
+	margin-bottom: 8px;
+	white-space: nowrap;
+}
+
+.column__item:first-child {
+	margin-bottom: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.five__title {
+	font-weight: 700;
+	white-space: nowrap;
+	margin-bottom: 24px;
+}
+
+.five__label {
+	font-size: 14px;
+}
+
+.five__input {
+	width: 90%;
+	margin-bottom: 12px;
+	background: rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 4px;
+	padding: 9px 0 9px 12px;
+	position: relative;
+	z-index: 1;
+}
+
+/*з цією кнопкою намудрив,методом експеременту)))*/
+.five__button {
+	background: url(../img/icon/line.svg) center 100% no-repeat;
+	position: absolute;
+	width: 12px;
+	height: 8px;
+	margin-left: -20px;
+	margin-top: 17px;
+	z-index: 2;
+}
